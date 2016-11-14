@@ -40,8 +40,46 @@ static KNOWN_COLORS : &'static [Color] = &[
 	}
 ];
 
-pub fn color_to_hex(color_str: &str) -> Option<Vec<u8>>
+pub fn color_to_bytes(color_str: &str) -> Option<Vec<u8>>
 {
+	if color_str.starts_with("#") && color_str.len() == 7 {
+		let mut color_chars = color_str.chars().skip(1);
+
+		let mut rstr = String::new();
+		let mut gstr = String::new();
+		let mut bstr = String::new();
+
+		rstr.push(color_chars.next().unwrap());
+		rstr.push(color_chars.next().unwrap());
+
+		gstr.push(color_chars.next().unwrap());
+		gstr.push(color_chars.next().unwrap());
+
+		bstr.push(color_chars.next().unwrap());
+		bstr.push(color_chars.next().unwrap());
+
+		let mut color_bytes = Vec::new();
+
+		match u8::from_str_radix(&rstr, 16) {
+			Ok(b) => color_bytes.push(b),
+			_ => return None
+		}
+
+		match u8::from_str_radix(&gstr, 16) {
+			Ok(b) => color_bytes.push(b),
+			_ => return None
+		}
+
+		match u8::from_str_radix(&bstr, 16) {
+			Ok(b) => color_bytes.push(b),
+			_ => return None
+		}
+
+
+
+		return Some(color_bytes);
+	}
+
 	for color in KNOWN_COLORS {
 		if color_str == color.name {
 			return Some(color.bytes.to_vec());
