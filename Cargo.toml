@@ -6,6 +6,9 @@ authors = ["rayleigh <rayleigh@protonmail.com>"]
 description = "Tool for configuring SteelSeries Rival 700 on Linux."
 keywords = ["SteelSeries", "Rival 700", "SteelSeries Engine 3", "rival"]
 
+homepage = "https://github.com/s-rayleigh/rice"
+repository = "https://github.com/s-rayleigh/rice"
+
 license = "GPL-3.0"
 
 [dependencies]
