@@ -1,4 +1,4 @@
-// Copyright 2016 rayleigh
+// Copyright 2016-2018 rayleigh
 //
 // This file is part of Rice.
 //
@@ -29,6 +29,7 @@ pub struct Device<'a> {
 }
 
 impl<'a> Device<'a> {
+
 	/// Constructs a new `Device` with specified vid and pid.
 	///
 	/// If no device with specified vid and pid, returns `Err(reason)`.

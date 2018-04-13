@@ -1,4 +1,4 @@
-// Copyright 2016 rayleigh
+// Copyright 2016-2018 rayleigh
 //
 // This file is part of Rice.
 //
@@ -74,8 +74,6 @@ pub fn color_to_bytes(color_str: &str) -> Option<Vec<u8>>
 			Ok(b) => color_bytes.push(b),
 			_ => return None
 		}
-
-
 
 		return Some(color_bytes);
 	}

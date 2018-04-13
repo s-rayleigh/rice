@@ -1,4 +1,4 @@
-// Copyright 2016 rayleigh
+// Copyright 2016-2018 rayleigh
 //
 // This file is part of Rice.
 //

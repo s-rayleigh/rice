@@ -3,7 +3,7 @@ name = "rice"
 version = "0.1.0"
 authors = ["rayleigh <rayleigh@protonmail.com>"]
 
-description = "Tool for configuring SteelSeries Rival 700 on Linux."
+description = "Tool for configuring SteelSeries Rival 700 in the Linux OS."
 keywords = ["SteelSeries", "Rival 700", "SteelSeries Engine 3", "rival"]
 
 homepage = "https://github.com/s-rayleigh/rice"
