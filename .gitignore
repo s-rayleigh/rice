@@ -1,5 +1,10 @@
-/target/
+files/
 Cargo.lock
 **/*.rs.bk
-.idea
 *.pcapng
+
+# Builds
+target/
+
+# IntelliJ Idea
+.idea
